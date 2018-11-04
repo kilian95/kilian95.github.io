@@ -1,269 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+<title>Norn Iron Ipsum</title>
+<link rel="stylesheet" href="assets/index.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<img src="assets/cranes.jpg" class="background">
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<h1>Norn Iron Ipsum</h1>
+			<div class="row">
+				<p>Generate Lorem Ipsum placeholder text with a Norn Iron twist. <br> Just hit the wee button to generate the text.</p>
+			</div>
+			<div class="row">
+				<p> Paragraphs: 
+					<input type="number" id="paragraphs" value="3">
+				</p>
+			</div>
+			<div class="row">
+				<button type="button" class="btn btn-primary" id="generate">Generate</button>
+			</div>
+			<div class="row">
+				
+				<div class="display-none" id="output"></div>
+			</div>
+			<div class="row">
+				<button type="button" class="btn btn-primary display-none" id="copy">Copy to clipboard</button>
+			</div>
+			<div class="row">
+				<img src="assets/bucky.gif" class="bucky display-none">
+			</div>
+			
+		</div>
+	</div>
 
-  <head>
+	
+	
+</div>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Portfolio | Kilian Drayne</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-
-    <!-- Custom styles for this template -->
-    <link href="css/freelancer.min.css" rel="stylesheet">
-
-  </head>
-
-  <body id="page-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Kilian Drayne</a>
-        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Header -->
-    <header class="masthead bg-primary text-white text-center">
-      <div class="container">
-        <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
-        <h1 class="text-uppercase mb-0">Kilian Drayne</h1>
-        <hr class="star-light">
-        <h2 class="font-weight-light mb-0">Software Engineer Graduate</h2>
-      </div>
-    </header>
-
-    <!-- Portfolio Grid Section -->
-    <section class="portfolio" id="portfolio">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-        <hr class="star-dark mb-5">
-        <div class="row">
-          <div class="col-md-6 col-lg-6">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <button type="button" class="btn btn-secondary">Ruby on Rails</button>
-                  <button type="button" class="btn btn-secondary">Bootstrap</button>
-                  <button type="button" class="btn btn-secondary">Postgresql</button>
-                  <row>
-                    <button type="button" class="btn btn-secondary">HTML5</button>
-                    <button type="button" class="btn btn-secondary">Javascript</button>
-                  </row>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/carshare1.png" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-6">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <button type="button" class="btn btn-secondary">HTML5</button>
-                  <button type="button" class="btn btn-secondary">Javascript</button>
-                  <button type="button" class="btn btn-secondary">Google Maps API</button>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/graffNearMe.png" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-6">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <button type="button" class="btn btn-secondary">HTML5</button>
-                  <button type="button" class="btn btn-secondary">Javascript</button>
-                  <button type="button" class="btn btn-secondary">AJAX</button>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/ajaxNews.png" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-6">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <button type="button" class="btn btn-secondary">HTML5</button>
-                  <button type="button" class="btn btn-secondary">Javascript</button>
-                  <button type="button" class="btn btn-secondary">jQuery</button>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/game2.png" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="bg-primary text-white mb-0" id="about">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-white">About</h2>
-        <hr class="star-light mb-5">
-        <div class="row">
-          
-          <div class="col-lg-12">
-            <p class="lead">Hi! I'm Kilian, a graduate Software engineer with a first class honours from Ulster University with 1 years’ experience working primarily with Ruby on Rails. I have worked on several projects within University and in my spare time and am always eager to take on new challenges.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Contact Me</h2>
-        <hr class="star-dark mb-5">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h4 class="text-uppercase mb-4"><br>kiliandrayne@hotmail.com</h4>
-            <a class="btn btn-primary btn-lg rounded-pill" href="https://github.com/kilian95">Github</a>
-          </div>
-        </div>  
-      </div>
-    </section>
-
-    
-    <div class="copyright py-4 text-center text-white">
-      <div class="container">
-        <small>Copyright Kilian Drayne 2018</small>
-      </div>
-    </div>
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-to-top d-lg-none position-fixed ">
-      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
-        <i class="fa fa-chevron-up"></i>
-      </a>
-    </div>
-
-    <!-- Portfolio Modals -->
-
-    <!-- Portfolio Modal 1 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0"><a href="https://carsharev3.herokuapp.com/">Car Share</h2></a>
-              <hr class="star-dark mb-5">
-              <a href="https://carsharev3.herokuapp.com/"><img class="img-fluid mb-5" src="img/portfolio/carshare1.png" alt=""></a>
-              <p class="mb-5">This project was created during the final year of University. The aim was to create a 2 sided platform where users could share lifts. Created using Ruby on Rails, Javascript, Bootstrap as the front end framework and Postgres as the chosen database. The web app had a range of features including user authentication, a real time messaging system implemented using websockets, a review and notification system and admin capability. The app was deployed using the cloud platform Heroku, with user uploaded images being stored using AWS's EC2 service.</p> 
-              <a class="btn btn-primary btn-lg rounded-pill" href="https://carsharev3.herokuapp.com/">View Site</a>
-              <a class="btn btn-primary btn-lg rounded-pill" href="https://github.com/kilian95/carShareV2">View Repository</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Graffiti Near Me</h2>
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/graffNearMe.png" alt="">
-              <p class="mb-5">This project, which I worked on in my spare time had the aim of documenting the location of street art in Belfast. Using Ruby on Rails to build the app, users could upload images of street art and through the use of the Google Maps API, they could then mark the location so other users could see the art work in person. For this project, my main objectives were to create a single page aplication which was intuitive and simple to use. </p>
-              <a class="btn btn-primary btn-lg rounded-pill" href="https://github.com/kilian95/graffapp">View Repository</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 3 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Single Page News Application</h2>
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/ajaxNews.png" alt="">
-              <p class="mb-5">This single page application shows recent news articles from several sources retrieved via API calls. The site has several categories and a customizable page where the user could decide which content they wanted to see. Content was dynamically loaded via AJAX and displayed using JQuery.</p>
-              <a class="btn btn-primary btn-lg rounded-pill" href="https://github.com/kilian95/learningAjax">View Repository</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 4 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Street Art</h2>
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/game2.png" alt="">
-              <p class="mb-5">This project consisted of a fun Javascript game where users could "paint" on several types of surfaces and create unique art. Through the development of this game I greatly improved my Javascript knowledge and had fun make it!</p>
-              <a class="btn btn-primary btn-lg rounded-pill" href="https://github.com/kilian95/learningjquery">View Repository</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-   
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/freelancer.min.js"></script>
-
-  </body>
-
+</body>
 </html>
